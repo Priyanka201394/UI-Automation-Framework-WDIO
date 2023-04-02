@@ -1,0 +1,47 @@
+{
+  "name": "task",
+  "version": "1.0.0",
+  "description": "Technical Task For WTW",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx wdio wdio.conf.ts",
+    "regression": "npx wdio wdio.conf.ts --suite regression",
+    "wdio": "wdio run ./wdio.conf.js",
+    "report": "allure generate allure-results --clean && allure open"
+  },
+  "author": "Priyanka Ramesh Kumar",
+  "license": "ISC",
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@types/webdriverio": "^5.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.57.0",
+    "@typescript-eslint/parser": "^5.57.0",
+    "@vitejs/plugin-react": "^3.1.0",
+    "@wdio/allure-reporter": "^8.6.8",
+    "@wdio/browser-runner": "^8.6.9",
+    "@wdio/cli": "^8.6.9",
+    "@wdio/cucumber-framework": "^8.6.9",
+    "@wdio/logger": "^8.6.6",
+    "@wdio/mocha-framework": "^8.6.8",
+    "@wdio/spec-reporter": "^8.6.8",
+    "chromedriver": "^111.0.0",
+    "cucumber": "^6.0.7",
+    "eslint": "^8.37.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-config-standard-with-typescript": "^34.0.1",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.7.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-wdio": "^8.0.14",
+    "prettier": "^2.8.7",
+    "react": "^18.2.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.3",
+    "wdio-chromedriver-service": "^8.1.1"
+  },
+  "dependencies": {
+    "allure-commandline": "^2.21.0"
+  }
+}
