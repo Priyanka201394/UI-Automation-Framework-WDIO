@@ -1,5 +1,5 @@
 ## Task-1 
-  - The File with the neccesary test cases are added in the git repo.
+  - The **Task-1-Solution** File has the neccesary test cases and is added in the git repo.
   
 ## Task - 2
 # UI-Automation-Framework-WDIO
