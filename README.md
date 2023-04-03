@@ -50,6 +50,8 @@ npm run regression
   - This framework can be extended to use the mail verfication for functionalities using Mailinatour dependencies.
   - This framework can also be extended to perform API testing through axios library or supertest.
   - The framework can be deployed in a CICD tool for build, test an deploy and can be configured to run regularly scheduled tests.
+  - The project can be conatinerised using docker for cross browser testing, since my system is not enterprise version to install docer, I was unable to implement it.
+  - The framework can also be extended to use Sauselabs and Browserstack for parallel and cross browser testing for Virtual machines.
   
   
   
