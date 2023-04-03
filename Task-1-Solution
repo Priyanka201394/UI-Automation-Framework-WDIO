@@ -1,0 +1,40 @@
+Testing the functionality of the form:
+a) Validate whether the user is able to convert the value entered to target currencies from base currencies with different amounts and check if the actual results are matching the expected results based on exchange rates stored in the database.
+b) Validate whether the system calculates the target amount including commission rate when the commission rate checkbox is enabled and check if the commission rate applied is as per the stored value in the database for the respective currency.
+c) Validate boundary values of all input fields and response fields by entering the least possible value and maximum possible values, capture all the valid/invalid error messages displayed for incorrect inputs.
+d)Validate whether the system displays the valid maintenance message when the database is down by performing a database failover by bringing the database down.
+ e)Validate the response time of the application without load with application baseline concurrent users and compare the response time with load for same concurrent users, capturing any deviations for performance issues.
+f)Validate if the APIs exposed to the end users doesn't have any vulnerabilities by running scans and ensure that proper API gateway is implemented for the APIs exposed outside.
+g)Validate if the valid exception handling is implemented in the application for authentication failures, authentication expiry, system timeouts, connectivity and network issues.
+ 
+Test for the “Maintain currencies” form:
+a. Validate if the system allows to add new currencies in the "Maintain currencies" form and check if the newly added currency is updated in the database and also the currency converter GUI displays it once added.
+b. Validate if the system allows to edit the existing currencies list in the "Maintain currencies" form and update the currency values which should be immediately reflected in the relevant table in the shared database and check if the updated currency values are displayed as expected in GUI.
+c. Validate if the system allows the user to delete the currencies from the existing list and it is immediately removed from the database table and verify if they are removed from the current converter GUI available currency list.
+d. Validate if the system displays the appropriate error message when the user tries to add new invalid currency details or update the existing currency to invalid values.
+e. Validate if there are no system cache for the added, updated & deleted currencies from Maintain Currencies GUI and same has to be reflected in the database and currency converter GUI immediately across existing users login., check if the browser caching is correctly handled in the code to avoid displaying old values.
+
+
+Tests for the “Maintain commision rates” form:
+a. Validate the system for add, update and delete commision rates functionality same as from "Maintain currencies" test cases a, b & c.
+b. Validate if the system displays appropriate error messages when the commision rates added, updated are not within the defined boundary values.
+c. Validate the outcomes for inflight transactions which will be impacted by the adding, updating and deleting commission rates and capture the appropriate outcomes for the inflight transactions to fine tune it according to business requirement.
+
+Test for the accessibility of the form:
+a)Verify the forms accessibility using multiple screen readers from different OS and ensure the elements are clearly labeled, allowing access to users with disabilities or having impaired vision.
+b)Verify if the form could be accessed with a keyboard only allowing all possible functions without needing to access a mouse.
+c)Verify the different contrast, color and brightness settings of the form and ensure they are following the accessibility guidelines to support users with colour blindness or low vision.
+d)Verify the usability of the form across different screen resolutions and multiple devices to ensure that elements are visible regardless of the device, browser or screen resolutions.
+
+
+Development standards for ease of Automation:
+a) Using unique and consistent identifiers for all form elements which allows element identification and interaction easier for automation tool
+b) Usage of same standards for currencies, commision rates across the application for currency converter, maintain commission rates and maintain currencies to allow automation for creating reusable methods.
+c) Separate APIs with clear API documentation should be made available for functions currency converter, maintain currencies and maintain commision rates independent of each other which allows automation to create API tests for early defects detection and feedback.
+d) Implementation of ARIA labels and roles to ensure the form is accessible to assistive tools which allows automation to cover accessibility.
+
+
+Tests to include in International testing:
+a) Validate the system conversion value is displayed accurately across different currencies with and without commission rates irrespective of the region and location the tool is used from.
+b) Validate the system currency value is updated for source and target currency as per the countries current exchange rates guidelines and check the exchange rate changes are reflected real time in the system.
+c) Validate the application conversion rate, commision rates and target values are not affected under conditions such as time zones, date formats and language settings of the machine.
